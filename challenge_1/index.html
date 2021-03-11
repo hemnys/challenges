@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      section {
+        width: 100%;
+        display: block;
+      }
+      .section-1 {
+        background: red;
+        height: 100px;
+      }
+      .section-2 {
+        background-color: yellow;
+        height: 30px;
+      }
+      .section-3 {
+        background-color: blue;
+        height: 150px;
+      }
+      .section-4 {
+        background-color: gray;
+        height: 500px;
+      }
+      .section-5,
+      .section-6,
+      .section-7,
+      .section-8 {
+        background-color: black;
+        height: 400px;
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section-1"></div>
+    <div class="section-2"></div>
+    <div class="section-3"></div>
+    <div class="section-4"></div>
+    <div class="section-5"></div>
+    <div class="section-6"></div>
+    <div class="section-7"></div>
+    <div class="section-8"></div>
+    <script>
+      const $navBar = document.querySelector(".section-3");
+      const sticky = $navBar.offsetTop;
+
+      window.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset >= sticky) {
+            $navBar.classList.add("sticky");
+          } else {
+            $navBar.classList.remove("sticky");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
