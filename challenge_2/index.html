@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #rotating-promo-bar .slider {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        color: #fff;
+        font-size: 4em;
+      }
+      section video {
+        width: 100%;
+      }
+      .heading {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="heading">
+      <marquee behavior="" direction="">MARICO EL QUE LO LEA</marquee>
+    </section>
+    <section>
+      <div id="rotating-promo-bar" class="" data-speed="5000">
+        <div class="slider">Marico</div>
+        <div class="slider">el</div>
+        <div class="slider">que</div>
+        <div class="slider">lo</div>
+        <div class="slider">lea</div>
+      </div>
+    </section>
+    <section>
+      <video controls="true">
+        <source
+          src="https://www.w3schools.com/tags/movie.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <section>
+      <video controls="true">
+        <source
+          src="https://www.w3schools.com/tags/movie.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <section>
+      <video controls="true">
+        <source
+          src="https://www.w3schools.com/tags/movie.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <section>
+      <video controls="true">
+        <source
+          src="https://www.w3schools.com/tags/movie.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <section>
+      <video controls="true">
+        <source
+          src="https://www.w3schools.com/tags/movie.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <section>
+      <video controls="true">
+        <source
+          src="https://www.w3schools.com/tags/movie.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        const $rotatingPromoBar = $("#rotating-promo-bar");
+        if ($rotatingPromoBar) {
+          $rotatingPromoBar.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: false,
+            dots: true,
+            autoplaySpeed: $(this).data("speed"),
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
